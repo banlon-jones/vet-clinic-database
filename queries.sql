@@ -51,4 +51,4 @@ SELECT animals.name, owners.full_name, species.name from animals JOIN species ON
 
 SELECT * from animals JOIN owners ON animals.owners_id = owners.id WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
 
-SELECT owners.full_name, COUNT(animals.name) as num_animals from owners LEFT JOIN animals ON owners.id = animals.owners_id GROUP BY owners.full_name ORDER BY num_animals DESC;
+SELECT owners.full_name, COUNT(animals.name) from owners LEFT JOIN animals ON owners.id = animals.owners_id GROUP BY owners.full_name ORDER BY num_animals DESC;
