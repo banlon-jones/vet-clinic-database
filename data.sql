@@ -12,3 +12,29 @@ insert into animals(id, name, date_of_birth, escape_attempts, nuetered, weight_k
         (9, 'Boarmon', '2005-05-07', 7, true, 20.4),
         (10, 'Blossom', '1998-10-13', 3, true, 17),
         (11, 'Ditto', '2022-05-14', 4, true, 22);
+insert into owners(full_name, age) 
+    VALUES ('Sam Smith', 34),
+        ('Jennifer Orwell', 19),
+        ('Bob', 45),
+        ('Melody Pond', 77),
+        ('Dean Winchester', 14),
+        ('Jodie Whittaker', 38);
+
+insert into species(name) 
+    VALUES ('Pokemon'),
+        ('Digimon');
+
+update animals set species_id=2 where name LIKE '%mon%';
+
+update animals set species_id=1 where not name LIKE '%mon%';
+
+update animals set owner_id=1 where name = 'Agumon';
+
+update animals set owner_id=2 where id = 2 or id = 7;
+
+update animals set owner_id=3 where id= 3 or id = 4;
+
+update animals set owner_id=4 where id = 8 or id = 9 or id = 10;
+
+update animals set owner_id=5 where id = 5 or id = 6;
+
